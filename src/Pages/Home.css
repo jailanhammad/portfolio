@@ -1,0 +1,18 @@
+:root{
+    --brown:#191515;
+    --white:#FFFFFF;
+    --black:#000000;
+    --pink:#FF8CB0;
+    --pink-2:#FFC5D8;
+    --baby-pink:#D9A5A5;
+    --gray:#ACACAC;
+    --light-brown:#1E1B1B;
+
+    --poppins:"poppins";
+    --marck:"Marck Script", cursive;
+
+}
+body{
+    margin: 0 auto;    
+    background-color: var(--light-brown);
+}

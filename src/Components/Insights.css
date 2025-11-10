@@ -1,0 +1,37 @@
+.insights{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 140px;
+  }
+  .first{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 20px;
+  }
+  .num{
+    font-family: var(--poppins);
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--baby-pink);
+    text-align: center;
+    z-index: 1;
+  }
+  .line-3{
+    width: 70px;
+    color: white;
+  
+  }
+  .text-02{
+    font-family: var(--poppins);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white);
+    text-align: center;
+    z-index: 1;
+  }
