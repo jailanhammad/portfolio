@@ -3,7 +3,7 @@ import './Home.css';
 import Nav from '../Components/Nav';
 import Hero from '../Components/Hero';
 import About from '../Components/About';
-import Insights from '../Components/Insights';
+import Work from '../Components/Work';
 
 const Home = () => {
     return ( 
@@ -21,7 +21,8 @@ const Home = () => {
 <Hero />
 
 <About />
-
+ 
+<Work />
 
 
         </div>

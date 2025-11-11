@@ -1,9 +1,8 @@
 import React from 'react';
 import './About.css';
-import svg from '../Assets/svgs.svg';
-import next from '../Assets/next.svg';
 
-const Insights = () => {
+
+const Insights = (props) => {
     return ( 
     <>
     
@@ -14,10 +13,10 @@ const Insights = () => {
     <div class="first">
 
         <p class="num">
-            100+
+        {props.number}   
         </p>
         <hr class="line-3"></hr>
-        <p class="text-02">Project Complete</p>
+        <p class="text-02"> {props.text} </p>
 
     </div>
 

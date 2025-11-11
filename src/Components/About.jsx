@@ -39,9 +39,9 @@ const About = () => {
 
 <section class="insights">
 
-<Insights />
-<Insights />
-<Insights />
+<Insights number="100+" text="Project Complete" />
+<Insights number="4+" text="Year of Experience"/>
+<Insights number="3+" text="Internships" />
 
 </section>
 
