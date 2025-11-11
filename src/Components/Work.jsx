@@ -1,6 +1,8 @@
 import React from 'react';
 import './Work.css';
 import cd from '../Assets/cd.svg';
+import Card from '../Components/Card';
+
 
  const Work = () => {
     return (
@@ -16,48 +18,25 @@ import cd from '../Assets/cd.svg';
     <p class="service">My Services</p>
 
 
-    <div class="info-2">
+    <div class="info-22">
 
-    
+    <div class="two-divs">
 
-            <div class="two-divs">
+    <Card text1="UI / UX" text2="Programming" />
 
-                <div class="one">
-                <p class="ui">UI / UX</p>
-                </div>
+    </div>
 
-                <div class="one">
-                    <p class="ui">Programming</p>
-                </div>
+    <div class="two-divs-2">
 
-            </div>
+    <Card text1="Graphic Design" text2="Photography" />
 
+    </div>
 
-            <div class="two-divs-2">
+    <div class="two-divs-3">
 
-                <div class="one">
-                <p class="ui">Graphic Design</p>
-                </div>
+    <Card text1="Branding" text2="3D Modeling" />
 
-                <div class="one">
-                    <p class="ui">Photography</p>
-                </div>
-
-            </div>
-
-
-            <div class="two-divs-3">
-
-                <div class="one">
-                <p class="ui">Branding</p>
-                </div>
-
-                <div class="one">
-                    <p class="ui">3D Modeling</p>
-                </div>
-
-            </div>
-
+    </div>
 
 
     </div>
