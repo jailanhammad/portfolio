@@ -11,12 +11,13 @@ const Nav = () => {
 
 <header class="header"> 
 
+
         <img src={logo} class="logo"></img>
 
         <div class="menu">
 
-            <h1 class="text-bold">Home</h1>
-            <a href="about.html" class="text">About</a>
+            <link class="text-bold" to="/">Home</link>
+            <link to="/About-me" class="text">About</link>
             <h1 class="text">What I Do</h1>
             <h1 class="text">Contact</h1>
 

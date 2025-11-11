@@ -4,33 +4,11 @@ import './FooterC.css';
 const FooterC = (props) => {
     return (  
         <>
-        
-
-        <footer class="footer">
-
-<article class="footer-row">
-
-    <div class="logo-div">
-        <img src={props.logoo} class="logo"></img>
-    </div>
-
-
-    <div class="port">
-
+    
         <h1 class="boldd">{props.bold}</h1>
+        <p class="light">{props.light}</p>
+        <p class="c-text">{props.medium}</p>
 
-    </div>
-
-
-
-
-</article>
-
-</footer>
-
-        
-        
-        
         </>
     );
 }
