@@ -1,6 +1,9 @@
 import React from 'react';
 import './AboutPage.css';
-import Nav from '../Components/Nav';
+import AboutNav from '../Components/AboutNav';
+import AboutMe from '../Components/AboutMe';
+import Footer from '../Components/Footer';
+
 
 
 
@@ -18,17 +21,13 @@ const AboutPage = () => {
          
 <header class="header"> 
 
-<Nav />
+<AboutNav />
 
 </header>   
             
-            
-            
-            
-            
-            
-            
-            
+<AboutMe />          
+<Footer />
+   
             
         </div>   
     

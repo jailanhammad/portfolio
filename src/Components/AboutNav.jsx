@@ -4,7 +4,7 @@ import logo from '../Assets/logo.svg';
 import icon from '../Assets/translate.svg';
 import {Link, link} from 'react-router-dom';
 
-const Nav = () => {
+const AboutNav = () => {
     return ( 
     <>
     
@@ -16,11 +16,11 @@ const Nav = () => {
 
         <div class="menu">
 
-<Link class="text-bold" to="/">
+<Link class="text" to="/">
 Home
 </Link>
 
-<Link class="text" to="/About-me"> 
+<Link class="text-bold" to="/About-me"> 
 About
 </Link>
 
@@ -35,10 +35,19 @@ About
 
 </header>
         
+
+
+
+
+
+
+
+
+
         </>
          
        
      );
 }
  
-export default Nav;
+export default AboutNav;

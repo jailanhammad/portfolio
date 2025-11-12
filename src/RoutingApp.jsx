@@ -3,7 +3,6 @@ import Home from './Pages/Home';
 import AboutPage from './Pages/AboutPage';
 
 
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
