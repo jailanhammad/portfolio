@@ -7,7 +7,7 @@ const Insights = (props) => {
     <>
     
 
-<section class="insights">
+<article class="insightsss">
 
 
     <div class="first">
@@ -20,7 +20,7 @@ const Insights = (props) => {
 
     </div>
 
-</section>
+</article>
 
     </>
          

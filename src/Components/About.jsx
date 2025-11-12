@@ -37,13 +37,13 @@ const About = () => {
 </div>
 
 
-<section class="insights">
+<article class="insights">
 
 <Insights number="100+" text="Project Complete" />
 <Insights number="4+" text="Year of Experience"/>
 <Insights number="3+" text="Internships" />
 
-</section>
+</article>
 
 
 <div class="more-div">

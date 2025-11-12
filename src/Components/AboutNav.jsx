@@ -24,8 +24,9 @@ Home
 About
 </Link>
 
-
-            <h1 class="text">What I Do</h1>
+<Link class="text" to="/Work-Page"> 
+What I Do
+</Link>
             <h1 class="text">Contact</h1>
 
         </div>

@@ -17,7 +17,7 @@ const AboutMe = () => {
     <div class="portrait">
         <img src={hero} class="hero-3" alt="portrait"></img>
     </div>
-</section>
+        </section>
   
             
     <section className='secc'>

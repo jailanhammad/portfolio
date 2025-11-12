@@ -16,7 +16,7 @@ const Nav = () => {
 
         <div class="menu">
 
-<Link class="text-bold" to="/">
+<Link class="text" to="/">
 Home
 </Link>
 
@@ -24,7 +24,7 @@ Home
 About
 </Link>
 
-<Link class="text" to="/Work-Page"> 
+<Link class="text-bold" to="/Work-Page"> 
 What I Do
 </Link>
 
