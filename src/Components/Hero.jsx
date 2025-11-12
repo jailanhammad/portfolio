@@ -3,18 +3,29 @@ import './Hero.css';
 import sp from '../Assets/sparkle.svg';
 import hero from '../Assets/hero.svg';
 import dot from '../Assets/dott.svg';
+import BlurText from "./BlurText";
 
 const Hero = () => {
+
+
     return ( 
     <>
-    
+
 
 <article class="hero-section">
 
 <section class="coloumn-section">
 
+
     <p class="hi-text">Hi, I’m </p>
-    <p class="jailan-text">Jailan Hammad</p>
+    <BlurText
+    text="Jailan Hammad"
+    
+    delay={150}
+    animateBy="words"
+    direction="top"
+    className="jailan-text hi-text"
+    />
 
     <hr class="line"></hr>
 
