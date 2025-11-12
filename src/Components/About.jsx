@@ -39,8 +39,8 @@ const About = () => {
 
 <article class="insights">
 
-<Insights number="100+" text="Project Complete" />
-<Insights number="4+" text="Year of Experience"/>
+<Insights  text="Project Complete" />
+<Insights  text="Year of Experience"/>
 <Insights number="3+" text="Internships" />
 
 </article>

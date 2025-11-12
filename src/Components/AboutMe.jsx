@@ -1,18 +1,24 @@
 import React from 'react';
 import AboutCard from '../Components/AboutCard';
 import hero from '../Assets/hero.svg';
+import TextType from './TextType';
 
 const AboutMe = () => {
     return ( 
         <>
         
         
-        
-        
+ 
         <section class="hero-2">
     <div class="about-box-22">
         <h2>More About Me</h2>
-        <p class="p">Hi, I'm Jailan, a 21-year-old Digital Art and Design student at Egypt University of Informatics. I'm passionate about blending creativity and technology to design meaningful, visually engaging, and user-friendly experiences. Over the past few years, I've developed strong skills in UI/UX design and front-end development, and I enjoy bringing ideas to life through design and code.</p>
+        <TextType 
+        text={["Hi, I'm Jailan, a 21-year-old Digital Art and Design student at Egypt University of Informatics. I'm passionate about blending creativity and technology to design meaningful, visually engaging, and user-friendly experiences. Over the past few years, I've developed strong skills in UI/UX design and front-end development, and I enjoy bringing ideas to life through design and code."]}
+        typingSpeed={15}
+        pauseDuration={1500}
+        showCursor={true}
+        cursorCharacter="|"
+        />
     </div>
     <div class="portrait">
         <img src={hero} class="hero-3" alt="portrait"></img>

@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css';
+import CountUp from "./CountUp";
 
 
 const Insights = (props) => {
@@ -11,10 +12,15 @@ const Insights = (props) => {
 
 
     <div class="first">
+    <CountUp
+  from={0}
+  to={100}
+  separator=","
+  direction="up"
+  duration={2}
+  className="num"
+/>
 
-        <p class="num">
-        {props.number}   
-        </p>
         <hr class="line-3"></hr>
         <p class="text-02"> {props.text} </p>
 
