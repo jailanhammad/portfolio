@@ -2,8 +2,12 @@ import React from 'react';
 import AboutCard from '../Components/AboutCard';
 import hero from '../Assets/hero.svg';
 import TextType from './TextType';
+import AnimatedList from "../Components/AnimatedList";
 
 const AboutMe = () => {
+
+    const items = ['Education'] ['Work Experienc']; 
+
     return ( 
         <>
         
@@ -36,6 +40,14 @@ const AboutMe = () => {
 
     </section>
 
+    <AnimatedList
+    items={items}
+    onItemSelect={(item, index) => console.log(item, index)}
+    showGradients={true}
+    enableArrowNavigation={true}
+    displayScrollbar={true}
+  />
+
 
 
     <section className='secc'>
@@ -50,6 +62,13 @@ const AboutMe = () => {
         Worked on several design and development projects for academic and independent clients. Designed and developed interactive websites and digital campaigns. Collaborated with teams to create engaging UI/UX concepts. Gained three years of experience combining creativity with functionality." />
 
     </section>
+    <AnimatedList
+    items={items}
+    onItemSelect={(item, index) => console.log(item, index)}
+    showGradients={true}
+    enableArrowNavigation={true}
+    displayScrollbar={true}
+  />
 
     <section className='secc'>
         <h2>My Quality Services</h2>
@@ -62,7 +81,14 @@ const AboutMe = () => {
         </div>
 
     </section>
- 
+    <AnimatedList
+    items={items}
+    onItemSelect={(item, index) => console.log(item, index)}
+    showGradients={true}
+    enableArrowNavigation={true}
+    displayScrollbar={true}
+  />
+
         
         
         

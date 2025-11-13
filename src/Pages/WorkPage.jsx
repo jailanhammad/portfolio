@@ -8,7 +8,6 @@ import project2 from '../Assets/project2.png';
 import project3 from '../Assets/project3.png';
 import Footer from '../Components/Footer';
 
-
 const WorkPage = () => {
     return ( 
         <>
@@ -43,23 +42,28 @@ const WorkPage = () => {
 <div className='all'>
 
 <WorkC title="Giza Zoo Website" paragraph="The Giza Zoo website is a modern, interactive redesign project that highlights the beauty, history, and wildlife of Egypt’s oldest zoo. My goal was to create an engaging user experience that blends education with exploration." 
-view="View Project Details" project1={project1}  />
+view="View Project Details"/>
+
+
+
 
 </div>
 
 <div className='all'>
 
 <WorkC title="Real Esatate Website" paragraph="The design focuses on clarity and usability featuring clean layouts, large visuals, and intuitive filters to help users find homes that match their needs. I also integrated responsive design techniques to ensure the website looks and works perfectly on all devices." 
-view="View Project Details" project1={project2}  />
+view="View Project Details"/>
 
 </div>
 
 <div className='all'>
 
 <WorkC title="Jewellery Website" paragraph="The website features product collections, detailed item pages, and a user-friendly interface that makes browsing effortless. It’s fully responsive, ensuring a seamless experience on both desktop and mobile." 
-view="View Project Details" project1={project3}  />
+view="View Project Details"/>
 
 </div>
+
+
 
 <Footer />
 
