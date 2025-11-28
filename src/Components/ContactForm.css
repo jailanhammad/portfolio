@@ -1,0 +1,207 @@
+.card{
+    width: 800px;
+    height: 800px;
+    background-color: #2F2F2F;
+    border-radius: 20px;
+    margin-top: 100px;
+}
+.contact-text{
+    font-family: poppins;
+    color: white;
+    font-size: 20px;
+    margin-right: 500px;
+}
+.c-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+    margin-top: 40px;
+}
+.row-c{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 20px;
+}
+.phone-icon{
+    width: 24px;
+    height: 24px;
+
+}
+.number{
+    font-family: poppins;
+    color: white;
+    font-size: 16px; 
+}
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 20px;
+}
+
+.c-form-2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+    margin-top: 40px;
+}
+.big-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center; 
+    gap: 80px;
+}
+.first-name{
+    font-family: poppins;
+    color: white;
+    font-size: 16px;   
+}
+.c-c{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.line{
+    width: 300px;
+    color: white;
+}
+.select{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center; 
+    margin-top: 70px;
+    gap: 30px;
+}
+.row-subject{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center; 
+    gap: 60px;
+}
+.select-text{
+    font-family: poppins;
+    color: white;
+    font-size: 20px;
+    margin-right: 530px;
+}
+.subject-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center; 
+    gap: 10px;
+
+}
+.checkbox{
+    width: 15px;
+    height: 15px;
+    border: #a1a1a1 1px solid;
+    border-radius: 3px;
+    background-color: #5a5a5a;
+    
+}
+.general{
+    font-family: poppins;
+    color: white;
+    font-size: 13px; 
+    font-weight: 300;  
+}
+.message{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start; 
+    margin-top: 70px;
+    gap: 10px;
+    margin-left: 30px;
+}
+.message-text{
+    font-family: poppins;
+    color: white;
+    font-size: 20px;
+}
+.write{
+    font-family: poppins;
+    color: white;
+    font-size: 12px; 
+    margin-left: 20px;  
+}
+.line-2{
+    width: 400px;
+    color: white;
+    margin-right: 20px;
+}
+.c-c-2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.button-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center; 
+}
+.button{
+    font-family: poppins;
+    color: white;
+    font-size: 12px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center; 
+    background-color: #5a5a5a;
+    width: 150px;
+    height: 30px;
+    border:none;
+    border-radius: 5px;
+}
+.two-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center; 
+}
+.go{
+    width: 120px;
+    height: 60px;
+}
+.fill{
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start; 
+    background-color: #5a5a5a65;
+    width: 400px;
+    height: 30px;
+    border: rgba(255, 255, 255, 0.588) 1px solid ;
+    border-radius: 5px;
+}

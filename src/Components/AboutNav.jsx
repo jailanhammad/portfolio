@@ -27,8 +27,10 @@ About
 <Link class="text" to="/Work-Page"> 
 What I Do
 </Link>
-            <h1 class="text">Contact</h1>
 
+<Link class="text" to="/Contact-Page"> 
+Contact
+</Link>
         </div>
 
         <img src={icon} class="icon"></img>

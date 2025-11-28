@@ -8,11 +8,20 @@ import project2 from '../Assets/project2.png';
 import project3 from '../Assets/project3.png';
 import Footer from '../Components/Footer';
 
+import {Helmet} from "react-helmet";
+
 const WorkPage = () => {
     return ( 
         <>
         
-    
+<Helmet>
+        <title>My Work</title>
+        <meta name="description" content="This is the Work page" />
+        <meta property="og:title" content="My Work" />
+        <meta property="og:image" content="/Assets/logo.svg" />
+</Helmet>
+
+
         <div>
 
 <header class="header"> 

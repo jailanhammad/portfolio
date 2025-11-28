@@ -9,6 +9,7 @@ import Contact from '../Components/Contact';
 import Footer from '../Components/Footer';
 import Aurora from "../Components/Aurora";
 
+import {Helmet} from "react-helmet";
 
 
 const Home = () => {
@@ -16,6 +17,12 @@ const Home = () => {
     return ( 
         <>
 
+<Helmet>
+        <title>Jailan's Portfolio - Home</title>
+        <meta name="description" content="This is the Home page" />
+        <meta property="og:title" content="Home" />
+        <meta property="og:image" content="/Assets/logo.svg" />
+</Helmet>
              
         <div>
 

@@ -52,7 +52,7 @@ const Contact = () => {
                 <Cinfo phone={wp} />
                 </div>
                 
-            </div>
+        </div>
 
  
         
