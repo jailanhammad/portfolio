@@ -19,7 +19,7 @@ const Form = (props) => {
     const[msg, setMsg]= useState("");
 
    async function sendMsg(){
-        const res = await supabase.from("Contactus").insert({"title":title})
+        const res = await supabase.from("Contactus").insert({"title":title , "subtitle":subtitle, "email":email, "number":number, "message":msg} )
         console.log(res);
     }
 
@@ -91,7 +91,8 @@ const Form = (props) => {
       
     </form>
 
-    <button type="submit" onClick={(sendMsg)=>{console.log(title,subtitle,email,number,msg)}} class="save-btn">Save</button>
+    {/* <button type="submit" onClick={(sendMsg)=>{console.log(title,subtitle,email,number,msg)}} class="save-btn">Save</button> */}
+    <button type="submit" onClick={sendMsg} class="save-btn">Save</button>
 
 
 
