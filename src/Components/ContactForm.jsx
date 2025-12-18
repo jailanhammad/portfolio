@@ -67,28 +67,28 @@ const Form = (props) => {
             <div className='c-c'>
 
             <p class="first-name">First Name</p>
-            <hr className='line' />
+            {/* <hr className='line' /> */}
 
             </div>
 
             <div className='c-c'>
 
             <p class="first-name">Last Name</p>
-            <hr className='line' />
+            {/* <hr className='line' /> */}
 
             </div>
 
             <div className='c-c'>
 
             <p class="first-name">Email</p>
-            <hr className='line' />
+            {/* <hr className='line' /> */}
 
             </div>
 
             <div className='c-c'>
 
             <p class="first-name">Phone Number</p>
-            <hr className='line' />
+            {/* <hr className='line' /> */}
 
             </div>
 

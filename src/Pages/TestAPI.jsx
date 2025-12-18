@@ -1,83 +1,114 @@
 import React, {useEffect, useState} from 'react';
-import axios from 'axios';
-import TestState from './TestState';
-import img from '../Assets/1.webp';
-import './TestAPI.css';
+import { supabase } from '../Supabase';
 
 const TestAPI = () => {
 
-    // const callGetAPI = () => {
+    const [loading, setLoading] = useState(true);
+    const [ Projects, setProjects ]= useState ([
+       {
 
-    //     const res = axios.get("https://dummyjson.com/products/1");
-    //     console.log(res);
+        id:"",
+        title:"",
+        coverimg:"",
+        image:[],
+        description:"",
+        details:"",
+        category:[]
+        
+       } 
 
-    // }
-
-    const [resData , setresData] = useState("111");
+    ]);
 
     useEffect(() =>
 
     {
-        const callGetAPI = async () =>
-        {
-            const res = await axios.get("https://dummyjson.com/products/1");
-            setresData(res.data);
-        };
+
+       
+       async function callGetAPI(){
+
+        const Projects = await supabase.from("Projects").select("*");
+        setProjects(Projects.data);
+        setLoading(false);
+
+        // console.log(projects.data);
+        // console.log(projects.data[0].title);
+        // console.log(projects.data[0].coverimg);
+
+
+        }
     
         callGetAPI()
 
     },[]);
 
-console.log(resData);
-
+if (loading) return (<p>loading...</p>);
 
     return (  
 
         <>
-<TestState />
 
-<h1>
-{resData.title}
-</h1>
+12345
+
+
 <p>
-    {resData.description}
+
+{ Projects[0].title }
+
 </p>
 <p>
-    {resData.availabilityStatus}
-</p> 
-<p>
-    {resData.brand}
-</p> 
-<p>
-    {resData.category}
-</p> 
-<p>
-    {resData.dimentions}
+
+{ Projects[0].date }
+
 </p>
+
+<img src={ Projects[0].coverimg } alt="" />
+<img src={ Projects[0].image } alt="" />
+
 <p>
-    {resData.returnPolicy}
+
+{ Projects[0].description }
+
 </p>
+
+
 <p>
-    {resData.shippingInformation}
+
+{ Projects[0].Details }
+
 </p>
-<p>
-    {resData.sku}
-</p>
-<p>
-    {resData.stock}
-</p>
-<p>
-    {resData.tags}
-</p>
-<p>
-    {resData.warrantyInformation
+
+{
+    Projects[0].category.map((c)=>
+    {
+
+   return <h1>{c}</h1>
+
+    })
 }
-</p>
-<img src={img} className='imgwidth'/>
+
+{
+    Projects[0].image.map((img)=>
+    {
+  
+ 
+    return (
+
+        <div>
+
+        <img src={img.URL} alt={img.alt}/>
+        
+           </div>
+    
+    )
 
 
 
-        </>
+
+    })
+}
+
+
+</>
     );
 }
  
