@@ -1,24 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ContactForm.css';
 import phone from '../Assets/phone.svg';
-import email from '../Assets/email.svg';
+import emailicon from '../Assets/email.svg';
 import loc from '../Assets/loc.svg';
 import share from '../Assets/share.svg';
 import fb from '../Assets/fb.svg';
 import ig from '../Assets/ig.svg';
 import wp from '../Assets/wp.svg';
 import go from '../Assets/go.svg';
+import { supabase } from '../Supabase';
 
 const Form = (props) => {
+
+    const[title, setTitle]= useState("");
+    const[subtitle, setSubtitle]= useState("");
+    const[email, setEmail]= useState("");
+    const[number, setNumber]= useState("");
+    const[msg, setMsg]= useState("");
+
+   async function sendMsg(){
+        const res = await supabase.from("Contactus").insert({"title":title})
+        console.log(res);
+    }
+
     return (  
         <>
-        
+  
         
 <div className='card'>
 
         <h1 className='contact-text'>
         Contact Information
         </h1>
+
+   
 
     <div className='big-row'>
 
@@ -33,7 +48,7 @@ const Form = (props) => {
 
                     <div className='row-c'>
 
-                    <img src={email} class="phone"></img>
+                    <img src={emailicon} class="phone"></img>
                     <p class="number">Jailanhammad@gmail.com</p>
 
                     </div>
@@ -62,38 +77,27 @@ const Form = (props) => {
 
             </div>
 
-            <div className='c-form-2'>
-
-            <div className='c-c'>
-
-            <p class="first-name">First Name</p>
-            {/* <hr className='line' /> */}
-
-            </div>
-
-            <div className='c-c'>
-
-            <p class="first-name">Last Name</p>
-            {/* <hr className='line' /> */}
-
-            </div>
-
-            <div className='c-c'>
-
-            <p class="first-name">Email</p>
-            {/* <hr className='line' /> */}
-
-            </div>
-
-            <div className='c-c'>
-
-            <p class="first-name">Phone Number</p>
-            {/* <hr className='line' /> */}
-
-            </div>
+    <div className='c-form-2'>
 
 
-            </div>
+
+    <form className='c-form-2'  onSubmit={sendMsg} >
+
+      <input type="text" onChange={(i)=>{setTitle(i.target.value)}}  className='c-c' placeholder="First Name"/>
+      <input type="text" onChange={(i)=>{setSubtitle(i.target.value)}}  className='c-c'placeholder="Last Name"/>
+      <input type="email" onChange={(i)=>{setEmail(i.target.value)}}  className='c-c' placeholder="Email"/>
+      <input type="tel" onChange={(i)=>{setNumber(i.target.value)}}   className='c-c'placeholder="Phone Number"/>
+
+      
+    </form>
+
+    <button type="submit" onClick={(sendMsg)=>{console.log(title,subtitle,email,number,msg)}} class="save-btn">Save</button>
+
+
+
+
+
+    </div>
 
     </div>
 
@@ -145,6 +149,7 @@ const Form = (props) => {
 
 <div className='message'>
 
+
      
 <h1 className='message-text'>
 Message        
@@ -157,11 +162,11 @@ Message
 
 <div className='two-row'>
 
-<div className='fill'>
+<form className='formmm' onSubmit={sendMsg}>
     
-<p class="write">Write your message..</p>
+<input  type="tel" onChange={(i)=>{setMsg(i.target.value)}}   className='c-c' placeholder="Write your message..." />
 
-</div>
+</form>
 
 <div className='button-div'>
 
