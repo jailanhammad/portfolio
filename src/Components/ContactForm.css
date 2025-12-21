@@ -1,6 +1,6 @@
 .card{
     width: 800px;
-    height: 800px;
+    height: 700px;
     background-color: #2F2F2F;
     border-radius: 20px;
     margin-top: 100px;
@@ -28,9 +28,9 @@
     justify-content: center;
     gap: 20px;
 }
-.phone-icon{
-    width: 24px;
-    height: 24px;
+.phone-22{
+    width: 20px;
+    height: 20px;
 
 }
 .number{
@@ -79,14 +79,17 @@
     gap: 20px;
     background-color: #5a5a5a65;
     width: 300px ;
-    height: 40px;
+    height: 35px;
     border-radius: 5px;
     border: rgba(255, 255, 255, 0.588) 1px solid ;
     font-family: poppins;
     color: white;
     font-size: 12px;
-    margin-left: 10px;  
 
+}
+input::placeholder{
+    padding-left: 10px;
+    color: rgb(199, 199, 199);
 }
 /* .line{
     width: 300px;
@@ -181,13 +184,14 @@
 }
 .button{
     font-family: poppins;
-    color: white;
+    color: #191515;
     font-size: 12px;   
+    font-weight: 600;
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center; 
-    background-color: #5a5a5a;
+    background-color: #FFC5D8;
     width: 150px;
     height: 30px;
     border:none;
@@ -492,4 +496,73 @@
     font-size: 13px;
   }
 
+}
+
+
+.subject-container {
+    padding: 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.subject-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.subject-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.subject-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    gap: 12px;
+}
+
+.subject-item input {
+    display: none;
+}
+
+.custom-box {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #555; 
+    border-radius: 4px;
+    background-color: transparent;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.subject-item input:checked + .custom-box {
+    background-color: #888; 
+    border-color: #fff;
+}
+
+.subject-item input:checked + .custom-box::after {
+    content: "✓";
+    display: block;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    line-height: 18px;
+}
+
+.label-text {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.subject-item input:checked ~ .label-text {
+    color: white;
 }

@@ -9,7 +9,7 @@ const AboutCard = (props) => {
         <>
   
 
-    <div class="card">
+    <div class="card-00">
             <p>{props.edu}</p>
     </div>
   

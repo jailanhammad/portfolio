@@ -7,7 +7,6 @@ import share from '../Assets/share.svg';
 import fb from '../Assets/fb.svg';
 import ig from '../Assets/ig.svg';
 import wp from '../Assets/wp.svg';
-import go from '../Assets/go.svg';
 import { supabase } from '../Supabase';
 
 const Form = (props) => {
@@ -41,21 +40,21 @@ const Form = (props) => {
 
                     <div className='row-c'>
 
-                    <img src={phone} class="phone"></img>
+                    <img src={phone} class="phone-22"></img>
                     <p class="number">+02 01000444401</p>
 
                     </div>
 
                     <div className='row-c'>
 
-                    <img src={emailicon} class="phone"></img>
+                    <img src={emailicon} class="phone-22"></img>
                     <p class="number">Jailanhammad@gmail.com</p>
 
                     </div>
 
                     <div className='row-c'>
 
-                    <img src={loc} class="phone"></img>
+                    <img src={loc} class="phone-22"></img>
                     <p class="number">Masr El Gdida</p>
 
                     </div>
@@ -63,13 +62,13 @@ const Form = (props) => {
 
                     <div className='row-c'>
 
-                    <img src={share} class="phone"></img>
+                    <img src={share} class="phone-22"></img>
 
                     <div class="icons">
 
-                    <img src={fb} class="phone"></img>
-                    <img src={ig} class="phone"></img>
-                    <img src={wp} class="phone"></img>
+                    <img src={fb} class="phone-22"></img>
+                    <img src={ig} class="phone-22"></img>
+                    <img src={wp} class="phone-22"></img>
 
                     </div>
 
@@ -87,106 +86,51 @@ const Form = (props) => {
       <input type="text" onChange={(i)=>{setSubtitle(i.target.value)}}  className='c-c'placeholder="Last Name"/>
       <input type="email" onChange={(i)=>{setEmail(i.target.value)}}  className='c-c' placeholder="Email"/>
       <input type="tel" onChange={(i)=>{setNumber(i.target.value)}}   className='c-c'placeholder="Phone Number"/>
+      <input type="tel" onChange={(i)=>{setMsg(i.target.value)}}   className='c-c' placeholder="Write your message..." />
 
       
     </form>
 
     {/* <button type="submit" onClick={(sendMsg)=>{console.log(title,subtitle,email,number,msg)}} class="save-btn">Save</button> */}
-    <button type="submit" onClick={sendMsg} class="save-btn">Save</button>
+    <button type="submit" onClick={sendMsg} class="button">Send Message</button>
+
 
 
 
 
 
     </div>
-
-    </div>
-
-
-    <div className='select'>
-        
-        <h1 className='select-text'>
-        Select Subject?
-        </h1>
-
-            <div className='row-subject'>
-
-            <div className='subject-1'>
-
-            <div className='checkbox'>
-
-            </div>
-            <h1 className='general'>General Inquiry</h1>
-            </div>
-
-            <div className='subject-1'>
-
-            <div className='checkbox'>
-
-            </div>
-            <h1 className='general'>Brand Identity</h1>
-            </div>
-
-            <div className='subject-1'>
-
-            <div className='checkbox'>
-
-            </div>
-            <h1 className='general'>UI/UX</h1>
-            </div>
-
-            <div className='subject-1'>
-
-            <div className='checkbox'>
-
-            </div>
-            <h1 className='general'>Packaging Design</h1>
-            </div>
-
-            </div>
 
     </div>
 
 
-<div className='message'>
+<div class="subject-container">
+    <p class="subject-title">Select Subject?</p>
+    <div class="subject-grid">
+        <label class="subject-item">
+            <input type="checkbox" name="subject" value="general"/>
+            <span class="custom-box"></span>
+            <span class="label-text">General Inquiry</span>
+        </label>
 
+        <label class="subject-item">
+            <input type="checkbox" name="subject" value="branding"/>
+            <span class="custom-box"></span>
+            <span class="label-text">Brand Identity</span>
+        </label>
 
-     
-<h1 className='message-text'>
-Message        
-</h1>
+        <label class="subject-item">
+            <input type="checkbox" name="subject" value="uiux"/>
+            <span class="custom-box"></span>
+            <span class="label-text">UI/UX</span>
+        </label>
 
-
-
-<div className='c-c-2'>
-
-
-<div className='two-row'>
-
-<form className='formmm' onSubmit={sendMsg}>
-    
-<input  type="tel" onChange={(i)=>{setMsg(i.target.value)}}   className='c-c' placeholder="Write your message..." />
-
-</form>
-
-<div className='button-div'>
-
-<img src={go} class="go"></img>
-
-<button className='button'>
-Send Message
-</button>
-
-</div>
-
-
-</div>
-
-</div>
-
-
-
-
+        <label class="subject-item">
+            <input type="checkbox" name="subject" value="packaging"/>
+            <span class="custom-box"></span>
+            <span class="label-text">Packaging Design</span>
+        </label>
+    </div>
 </div>
 
 
