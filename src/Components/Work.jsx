@@ -11,7 +11,6 @@ import Card from '../Components/Card';
         <article class="work">
 
 <h1 class="about-me-text">What I Do</h1>
-<hr class="line-2"></hr>
 
 <section class="middle">
 

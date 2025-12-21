@@ -11,102 +11,85 @@ import wp from '../Assets/wp.svg';
 import nextt from '../Assets/nextt.svg';
 
 import Cinfo from '../Components/Cinfo';
+import {Link, link} from 'react-router-dom';
 
 
 
 const Contact = () => {
     return ( 
         <>
-        
-        <article class="contact-2">
 
-    <div class="bg-div">
-        <img src={cnt} class="contact-bg"></img>
-    </div>
+<section class="contact-section">
+    <img src="https://i.ibb.co/m5Ym9zD/purple-gem.png" class="shape shape-top" alt="decorative gem"/>
+    <img src="https://i.ibb.co/m5Ym9zD/purple-gem.png" class="shape shape-right" alt="decorative gem"/>
 
-    <div class="info-3">
+    <div class="main-wrapper">
+        <div class="contact-container">
+            <div class="contact-form-side">
+                <h2>Contact Me</h2>
+                <form>
+                    <div class="input-field">
+                        <input type="text" placeholder="Name" required/>
+                    </div>
+                    <div class="input-field">
+                        <input type="email" placeholder="Email" required/>
+                    </div>
+                    <div class="input-field">
+                        <input type="phone" placeholder="Mobile number" required/>
+                    </div>
+                    <div class="input-field">
+                        <textarea placeholder="Message" rows="1"></textarea>
+                    </div>
+                    <button type="submit" class="send-btn">Send</button>
+                </form>
+            </div>
 
-        <h1 class="info-text">Info</h1>
+            <div class="info-panel-side">
+                <div class="info-content">
+                    <h3>Info</h3>
+                    
+                    <div class="info-item">
+                    <img src={phone} className='icon-width' />
+                    <span>+02 01000444401</span>
+                    </div>
+                    
+                    <div class="info-item">
+                    <img src={email} className='icon-width' />
+                        <span>Jailanhammad@gmail.com</span>
+                    </div>
+                    
+                    <div class="info-item">
+                    <img src={loc} className='icon-width' />
+                        <span>Masr El Gdida</span>
+                    </div>
 
-        <div class="coloumn-info-2">
-
-        <div class="row-info">
-        <Cinfo numberr="+02 01000444401" phone={phone} />
-        </div>
-        <div class="row-info">
-        <Cinfo numberr="Jailanhammad@gmail.com" phone={email} />
-        </div>
-        <div class="row-info">
-        <Cinfo numberr="Masr El Gdida" phone={loc} />
-        </div>
-
-        </div>
-
-
-        <div class="row-info">
-        <Cinfo phone={share} />
-
-                <div class="icons">
-                <Cinfo phone={fb} />
-                <Cinfo phone={ig} />
-                <Cinfo phone={wp} />
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/"><img src={fb}  className='icon-width'/></a>
+                        <a href="https://www.instagram.com/"><img src={ig} className='icon-width'/></a>
+                        <a href="https://web.whatsapp.com/"><img src={wp}  className='icon-width'/></a>
+                    </div>
                 </div>
-                
+            </div>
         </div>
 
- 
-        
+        <div class="more-info-footer">
+            <div class="more-info-link">
+             
+<Link to="/Contact-Page" className='arrow'>
+                More Info    <span class="arrow">→</span>
+</Link>
+            </div>
+        </div>
     </div>
-
-    <article class="contact">
-
-    <h1 class="contact-text">Contact Me</h1>
-
-    <div class="c-coloumn">
-
-        <div class="c-line">
-            <p class="fill">Name</p>
-            <hr class="new-line"></hr>
-        </div>
-
-        <div class="c-line">
-            <p class="fill">Email</p>
-            <hr class="new-line"></hr>
-        </div>
-
-        <div class="c-line">
-            <p class="fill">Message</p>
-            <hr class="new-line"></hr>
-        </div>
-
-       
-
-    </div>
+</section>
 
 
 
-    <div class="rowww">
-
-        <button class="send">
-            Send
-        </button>
 
 
-        <div class="more-div-2">
-            <p class="more-text-2">More About</p>
-            <img src={nextt} class="next"></img>
-        </div>
-    
 
-    </div>
 
-    </article>
 
-   
-</article>
-
-        
-        
         
         
         </>

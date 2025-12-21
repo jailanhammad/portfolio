@@ -11,7 +11,6 @@ const About = () => {
     <article class="about-section">
 
 <h1 class="about-me-text">About Me</h1>
-<hr class="line-2"></hr>
 
 <div class="center">
 
