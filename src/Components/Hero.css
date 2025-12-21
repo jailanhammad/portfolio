@@ -109,7 +109,7 @@
     display: inline-block;
     padding-left: 100%; /* البداية من بره الشاشة */
     animation: marquee 20s linear infinite; /* سرعة اللفة 20 ثانية */
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
     color: #1a1a1a;
   }
