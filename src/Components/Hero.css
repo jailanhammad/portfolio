@@ -93,3 +93,37 @@
     color: var(--brown);
     font-weight: 600;
 }
+
+
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden; /* عشان الكلام اللي يخرج بره الشاشة ميبانش */
+    background-color: #c49a9a; /* نفس اللون اللي في الصورة عندك */
+    padding: 20px 0;
+    white-space: nowrap; /* بيخلي الكلام كله في سطر واحد */
+    display: flex;
+  }
+  
+  .marquee-content {
+    display: inline-block;
+    padding-left: 100%; /* البداية من بره الشاشة */
+    animation: marquee 20s linear infinite; /* سرعة اللفة 20 ثانية */
+    font-size: 24px;
+    font-weight: bold;
+    color: #1a1a1a;
+  }
+  
+  .marquee-content span {
+    margin: 0 20px;
+  }
+  
+  /* حركة الشريط */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-80%); /* بيتحرك لنص المسافة عشان التكرار يغطي الفراغ */
+    }
+  }

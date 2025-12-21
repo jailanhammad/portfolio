@@ -79,21 +79,27 @@ const Hero = () => {
 </article>
 
     
-<article class="categories">
 
-<p class="textt">UI / UX</p>
-<img src={dot}  class="dot"></img>
-<p class="textt">Programming</p>
-<img src={dot}  class="dot"></img>
-<p class="textt">Branding</p>
-<img src={dot} class="dot"></img>
-<p class="textt">Graphic Design</p>
-<img src={dot}  class="dot"></img>
-<p class="textt">3D Modeling</p>
-<img src={dot} class="dot"></img>
-<p class="textt">Photography</p>
+<div class="marquee-container">
+  <div class="marquee-content">
+    <span>UI / UX</span> •
+    <span>Programming</span> •
+    <span>Branding</span> •
+    <span>Graphic Design</span> •
+    <span>3D Modeling</span> •
+    <span>Photography</span> •
+    <span>UI / UX</span> •
+    <span>Programming</span> •
+    <span>Branding</span> •
+    <span>Graphic Design</span> •
+    <span>3D Modeling</span> •
+    <span>Photography</span> •
+  </div>
+</div>
 
-</article>    
+
+
+
         </>
          
        
