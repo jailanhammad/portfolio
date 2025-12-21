@@ -10,7 +10,6 @@ import ig from '../Assets/ig.svg';
 import wp from '../Assets/wp.svg';
 import nextt from '../Assets/nextt.svg';
 
-import Cinfo from '../Components/Cinfo';
 import {Link, link} from 'react-router-dom';
 
 
@@ -64,6 +63,7 @@ const Contact = () => {
                     </div>
 
                     <div class="social-links">
+                    <img src={share}  className='icon-width'/>
                         <a href="https://www.facebook.com/"><img src={fb}  className='icon-width'/></a>
                         <a href="https://www.instagram.com/"><img src={ig} className='icon-width'/></a>
                         <a href="https://web.whatsapp.com/"><img src={wp}  className='icon-width'/></a>
