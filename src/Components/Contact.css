@@ -23,7 +23,6 @@
   overflow: visible;
 }
 
-/* Left Side: Pink Form */
 .contact-form-side {
   flex: 1;
   background-color: #f1b9c8;
@@ -44,13 +43,13 @@
 }
 
 .input-field input, 
-.input-field textarea {
+.input-field  textarea {
   width: 100%;
   background: transparent;
   border: none;
   outline: none;
   font-size: 18px;
-  padding: 10px 0;
+  padding: 10px 0 ;
   color: #1a1a1a;
 }
 
@@ -70,13 +69,11 @@
   margin-top: 20px;
 }
 
-/* Right Side: Black Info Panel */
 .info-panel-side {
   flex: 1.2;
   background-color: #121212;
   color: white;
   padding: 80px 80px;
-  /* The specific curve from the design */
   border-top-left-radius: 120px;
 }
 

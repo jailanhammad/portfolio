@@ -11,6 +11,7 @@ import ps from '../Assets/ps.svg';
 import pr from '../Assets/pr.svg';
 import vs from '../Assets/vs.svg';
 import ar from '../Assets/ar.svg';
+import lt from '../Assets/light.svg';
 
 const Skills = () => {
     return (
@@ -41,7 +42,7 @@ const Skills = () => {
             </div>
 
             <div class="skill-card">
-            <SkillsC ai={ps} aitext="Premier" aitextt="See projects"/>    
+            <SkillsC ai={ps} aitext="Photoshop" aitextt="See projects"/>    
             </div>
 
             <div class="skill-card">
@@ -54,6 +55,10 @@ const Skills = () => {
 
             <div class="skill-card">
             <SkillsC ai={ar} aitext="Aero" aitextt="See projects" />    
+            </div>
+
+            <div class="skill-card">
+            <SkillsC ai={lt} aitext="Light Room" aitextt="See projects" />    
             </div>
         </div>
     </section>
