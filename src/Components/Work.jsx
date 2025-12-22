@@ -1,12 +1,15 @@
 import React from 'react';
 import './Work.css';
 import cd from '../Assets/cd.svg';
-import Card from '../Components/Card';
+import {Link, link} from 'react-router-dom';
 
 
  const Work = () => {
     return (
         <>
+
+
+
 
         <article class="work">
 
@@ -17,33 +20,56 @@ import Card from '../Components/Card';
     <p class="service">My Services</p>
 
 
-    <div class="info-22">
+    <div class="container">
+        <img src={cd} class="disc"></img>
 
-    <div class="two-divs">
+        <div class="services-grid">
+            <div class="service-btn btn-1">
 
-    <Card text1="UI / UX" text2="Programming" />
+<Link to="/Work-page" className='linkkk'>
+UI / UX
+</Link>
+            </div>
 
+            <div class="service-btn btn-2">
+<Link to="/Work-page" className='linkkk'>
+Programming
+</Link>
+            </div>
+
+            <div class="service-btn btn-3">
+<Link to="/Work-page" className='linkkk'>
+Graphic Design
+</Link>
+            </div>
+
+
+            <div class="service-btn btn-4">
+                
+<Link to="/Work-page" className='linkkk'>
+Photography
+</Link>
+                
+                </div>
+
+            <div class="service-btn btn-5">
+
+<Link to="/Work-page" className='linkkk'>
+Branding
+</Link>
+            </div>
+
+            <div class="service-btn btn-6">
+                
+<Link to="/Work-page" className='linkkk'>
+3D Modeling
+</Link>  
+                
+                </div>
+        </div>
     </div>
 
-    <div class="two-divs-2">
 
-    <Card text1="Graphic Design" text2="Photography" />
-
-    </div>
-
-    <div class="two-divs-3">
-
-    <Card text1="Branding" text2="3D Modeling" />
-
-    </div>
-
-
-    </div>
-
-
-    <div class="cd-div">
-        <img src={cd} class="cd"></img>
-    </div>
 
 
 

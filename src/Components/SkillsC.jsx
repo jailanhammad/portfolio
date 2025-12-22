@@ -1,5 +1,6 @@
 import React from 'react';
 import './SkillsC.css';
+import {Link, link} from 'react-router-dom';
 
 
 const SkillsC = (props) => {
@@ -7,9 +8,18 @@ const SkillsC = (props) => {
         <>
 
 
-            <img src={props.ai} class="ai-pic"></img>
-            <p class="ai-text">{props.aitext}</p>
-            <p class="p">{props.aitextt}</p>
+            <img src={props.ai} class="ai-pic">
+            </img>
+            <p class="ai-text">
+<Link to="/Work-page" className='linkkk'>
+{props.aitext}
+</Link>
+            </p>
+            <p class="p">
+<Link to="/Work-page" className='linkkk'>
+{props.aitextt}
+</Link>
+            </p>
  
         
         

@@ -135,4 +135,27 @@
     width: 18px;
     height: 18px;
   }
+
+  .more-info-footer-22 {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 60px;
+    padding-right: 60px;
+  
+  }
+  
+  .more-info-link-22 {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .arrow-22 {
+    font-size: 16px;
+    text-decoration: none;
+    color: #ffffff;
+  
+  }
   

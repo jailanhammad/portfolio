@@ -20,7 +20,48 @@ const Skills = () => {
         
         <article class="skills-div">
 
-        <p class="skills">My Skills</p>
+    <section class="skills-section">
+        <h2 class="skills">My Skills</h2>
+        
+        <div class="skills-grid">
+            <div class="skill-card">
+            <SkillsC ai={ai} aitext="Illustrator" aitextt="See projects" />    
+            </div>
+
+            <div class="skill-card">
+            <SkillsC ai={figma} aitext="Figma" aitextt="See projects" />    
+            </div>
+
+            <div class="skill-card">
+            <SkillsC ai={ae} aitext="After Effects" aitextt="See projects" />    
+            </div>
+
+            <div class="skill-card">
+            <SkillsC ai={blender} aitext="Blender" aitextt="See projects" />    
+            </div>
+
+            <div class="skill-card">
+            <SkillsC ai={ps} aitext="Premier" aitextt="See projects"/>    
+            </div>
+
+            <div class="skill-card">
+            <SkillsC ai={pr} aitext="Premier" aitextt="See projects" />    
+            </div>
+
+            <div class="skill-card">
+            <SkillsC ai={vs} aitext="VS Code" aitextt="See projects" />    
+            </div>
+
+            <div class="skill-card">
+            <SkillsC ai={ar} aitext="Aero" aitextt="See projects" />    
+            </div>
+        </div>
+    </section>
+
+
+
+{/* 
+
 
 
     <article class="big-coloumn">
@@ -55,7 +96,7 @@ const Skills = () => {
 
 
         <div class="pr-div">
-        <SkillsC ai={ps} aitext="Premier" aitextt="55%" />    
+        <SkillsC ai={pr} aitext="Premier" aitextt="55%" />    
         </div>
 
 
@@ -71,7 +112,7 @@ const Skills = () => {
         </section>
 
     
-    </article>
+    </article> */}
 
 </article>
 

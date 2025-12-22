@@ -3,6 +3,7 @@ import './About.css';
 import Insights from '../Components/Insights';
 import svg from '../Assets/svgs.svg';
 import next from '../Assets/next.svg';
+import {Link, link} from 'react-router-dom';
 
 const About = () => {
     return ( 
@@ -44,13 +45,14 @@ const About = () => {
 
 </article>
 
-
-<div class="more-div">
-    <p class="more-text">More About</p>
-
-    <img src={next} class="next"></img>
-</div>
-
+<div class="more-info-footer-22">
+            <div class="more-info-link-22">
+             
+<Link to="/About-me" className='arrow-22'>
+                More Info    <span class="arrow-22">→</span>
+</Link>
+            </div>
+        </div>
 
 </article>
 
