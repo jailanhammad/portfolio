@@ -5,16 +5,57 @@ import dot from '../Assets/dott.svg';
 import BlurText from "./BlurText";
 import VariableProximity from "./VariableProximity";
 import {Link, link} from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
 import { useRef } from 'react';
+import { supabase } from '../Supabase';
 
 const Hero = () => {
 
     const containerRef = useRef(null);
 
+    const [loading, setLoading] = useState(true);
+    const [Personalidentity, setPersonalidentity] = useState([
+
+
+        {
+
+                id:"",
+                title:"",
+                coverimg:"",
+                image:[],
+                description:"",
+                details:"",
+                category:[]
+                
+               } 
+
+
+]) ;
+
+
+useEffect(()=>{
+
+ async function getAllPersonalidentityAPI(){
+  const res = await supabase.from("Personalidentity").select("*");
+  setPersonalidentity(res.data);
+  // console.log(res.data);
+    setLoading(false);
+}
+getAllPersonalidentityAPI();
+
+},[]);
+
+if (loading) return <p>Loading Api's...</p>;
+
+
 
     return ( 
     <>
 
+
+{Personalidentity
+  .filter(Personalidentity => Personalidentity.id === 1)
+  .map(Personalidentity => (
 
 <article class="hero-section">
 
@@ -22,7 +63,7 @@ const Hero = () => {
 
 
     <BlurText
-    text="Hi, I’m"
+    text={Personalidentity.title}
     
     delay={150}
     animateBy="words"
@@ -32,7 +73,7 @@ const Hero = () => {
 
 
     <BlurText
-    text="Jailan Hammad"
+    text={Personalidentity.subtitle}
     delay={150}
     animateBy="words"
     direction="top"
@@ -44,7 +85,7 @@ const Hero = () => {
 
  
     <p class="text-01">
-        a Digital Art and Design student passionate about creativity, design, and  <span class="bold">front-end development.</span> 
+    {Personalidentity.description}
     </p>
 
 
@@ -53,7 +94,7 @@ const Hero = () => {
 
         <img src={sp} class="svg"></img>
 <Link to="/Work-page" className='linkkk'>
-        <p class="explore">Explore My Work</p>
+        <p class="explore">{Personalidentity.button}</p>
 </Link>
         <img src={sp} class="svg"></img>
 
@@ -67,7 +108,10 @@ const Hero = () => {
 
 </article>
 
-    
+) 
+) 
+}
+
 
 <div class="marquee-container">
   <div class="marquee-content">
@@ -85,8 +129,6 @@ const Hero = () => {
     <span>Photography</span> •
   </div>
 </div>
-
-
 
 
         </>
