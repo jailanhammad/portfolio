@@ -1,23 +1,59 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import AboutCard from '../Components/AboutCard';
 import hero from '../Assets/hero.svg';
 import TextType from './TextType';
 import AnimatedList from "../Components/AnimatedList";
+import { supabase } from '../Supabase';
 
 const AboutMe = () => {
 
     const items = ['Education'] ['Work Experienc']; 
 
+
+    const [loading, setLoading] = useState(true);
+    const [Aboutus, setAboutus] = useState([
+
+
+        {
+
+                id:"",
+                title:"",
+                description:"",
+                img:"",
+                
+               } 
+
+
+]) ;
+
+
+useEffect(()=>{
+
+ async function getAllAboutusAPI(){
+  const res = await supabase.from("Aboutus").select("*");
+  setAboutus(res.data);
+  // console.log(res.data);
+    setLoading(false);
+}
+getAllAboutusAPI();
+
+},[]);
+
+if (loading) return <p>Loading...</p>;
+
+
     return ( 
         <>
         
-        
+{Aboutus
+  .filter(Aboutus => Aboutus.id === 1)
+  .map(Aboutus => (
  
         <section class="hero-2">
     <div class="about-box-22">
-        <h2>More About Me</h2>
+        <h2>{Aboutus.title}</h2>
         <TextType 
-        text={["Hi, I'm Jailan, a 21-year-old Digital Art and Design student at Egypt University of Informatics. I'm passionate about blending creativity and technology to design meaningful, visually engaging, and user-friendly experiences. Over the past few years, I've developed strong skills in UI/UX design and front-end development, and I enjoy bringing ideas to life through design and code."]}
+        text={Aboutus.description}
         typingSpeed={15}
         pauseDuration={1500}
         showCursor={true}
@@ -25,21 +61,29 @@ const AboutMe = () => {
         />
     </div>
     <div class="portrait">
-        <img src={hero} class="hero-3" alt="portrait"></img>
+        <img src={Aboutus.img} class="hero-3" alt="portrait"></img>
     </div>
         </section>
   
-            
+  ) 
+  ) 
+  }
+
+{Aboutus
+  .filter(Aboutus => Aboutus.id === 2)
+  .map(Aboutus => (   
     <section className='secc'>
+        
+    <h2>{Aboutus.title}</h2>
 
-        <h2>Education</h2>
-
-    <AboutCard edu="Egypt University of Informatics (EUI)— Digital Art & Design
-        2021 – Present
-        Currently in my senior year, focusing on user experience, digital interfaces, and creative technologies. My education combines both artistic creativity and technical precision." />
-
+    <AboutCard
+    edu={Aboutus.description}
+    />
     </section>
 
+) 
+) 
+}
     <AnimatedList
     items={items}
     onItemSelect={(item, index) => console.log(item, index)}
@@ -49,19 +93,34 @@ const AboutMe = () => {
   />
 
 
-
+{Aboutus
+  .filter(Aboutus => Aboutus.id === 3)
+  .map(Aboutus => (   
     <section className='secc'>
 
-        <h2>Work Experience</h2>
+        <h2>{Aboutus.title}</h2>
 
-        <AboutCard edu="Hammad Motors Showroom — Digital Designer & Front-End Developer 
-        2020 – 2025 – Present
-        Designed digital content, advertisements, and promotional materials for the showroom’s online platforms. Helped create engaging visuals for car promotions and improved the website’s layout to enhance user experience. This role strengthened my real-world design and marketing communication skills." />
-
-        <AboutCard edu="Freelance & University Projects -  2022 – Present
-        Worked on several design and development projects for academic and independent clients. Designed and developed interactive websites and digital campaigns. Collaborated with teams to create engaging UI/UX concepts. Gained three years of experience combining creativity with functionality." />
-
+        <AboutCard
+        edu={Aboutus.description}
+        />
     </section>
+
+) 
+) 
+}
+
+{Aboutus
+  .filter(Aboutus => Aboutus.id === 4)
+  .map(Aboutus => (   
+    <section className='secc'>
+       <AboutCard
+        edu={Aboutus.description}
+        />
+    </section>
+
+) 
+) 
+}
     <AnimatedList
     items={items}
     onItemSelect={(item, index) => console.log(item, index)}
@@ -70,17 +129,57 @@ const AboutMe = () => {
     displayScrollbar={true}
   />
 
+{Aboutus
+  .filter(Aboutus => Aboutus.id === 5)
+  .map(Aboutus => (   
     <section className='secc'>
-        <h2>My Quality Services</h2>
+        <h2>{Aboutus.title}</h2>
 
         <div class="card-2">
-        <AboutCard edu="UI/UX Design – crafting smooth, intuitive digital experiences." />
-        <AboutCard edu="Web Design & Front-End Development – building responsive, modern websites." />
-        <AboutCard edu="Brand Identity Design – creating cohesive and memorable visuals." />
-        <AboutCard edu="Creative Content Design – producing visuals for brands and social media campaigns." />
+        <AboutCard edu={Aboutus.description} />
         </div>
 
     </section>
+) 
+) 
+}
+{Aboutus
+  .filter(Aboutus => Aboutus.id === 6)
+  .map(Aboutus => (   
+    <section className='secc'>
+        <div class="card-2">
+        <AboutCard edu={Aboutus.description} />
+        </div>
+
+    </section>
+) 
+) 
+}
+{Aboutus
+  .filter(Aboutus => Aboutus.id === 7)
+  .map(Aboutus => (   
+    <section className='secc'>
+        <div class="card-2">
+        <AboutCard edu={Aboutus.description} />
+        </div>
+
+    </section>
+) 
+) 
+}
+{Aboutus
+  .filter(Aboutus => Aboutus.id === 8)
+  .map(Aboutus => (   
+    <section className='secc'>
+        <div class="card-2">
+        <AboutCard edu={Aboutus.description} />
+        </div>
+
+    </section>
+) 
+) 
+}
+
     <AnimatedList
     items={items}
     onItemSelect={(item, index) => console.log(item, index)}
