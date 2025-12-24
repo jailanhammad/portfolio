@@ -8,6 +8,7 @@ import Error from './Pages/Error';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import TestAPI from './Pages/TestAPI';
 import ContactPage from './Pages/ContactPage';
+import ProjectDetails from './Pages/ProjectDetails';
 
 
 const RoutingApp = () => {
@@ -27,6 +28,7 @@ const RoutingApp = () => {
 <Route path='/' element={<Home />} />
 <Route path='/About-me' element={<AboutPage />} />
 <Route path='/Work-Page' element={<WorkPage />} />
+<Route path='/Project-Details' element={<ProjectDetails />} />
 <Route path='/Contact-Page' element={<ContactPage />} />
 <Route path='/test-api' element={<TestAPI />} />
 <Route path='/*' element={<Error />} />

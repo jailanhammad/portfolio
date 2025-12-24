@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './WorkC.css';
 import { supabase } from '../Supabase';
+import {Link, link} from 'react-router-dom';
 
 
 
@@ -43,7 +44,10 @@ if (loading) return <p>Loading...</p>;
 <p className='para'>
     {props.description}
 </p>
+
+<Link class="text" to="/Project-Details"> 
 <p className='view'>{props.Details}</p>
+</Link>
 
 </div>
 

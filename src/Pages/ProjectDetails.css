@@ -1,0 +1,127 @@
+.pd-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 10px;
+}
+.my-work-text{
+    color: #FF8CB0;
+    font-size: 12px;
+    font-family: poppins;
+}
+.first-boxx-pd{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 200px;
+    height: 50px;
+    background-color: #FFC5D8;
+    margin-top: 30px;
+    margin-right: 600px;
+
+}
+.pink{
+    width: 35px;
+    height: 35px;
+}
+.ui-text{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: black;
+}
+.pd-article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.sectiontitle-text{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+    font-weight: 500;
+    margin-right: 660px;
+
+
+}
+.pd-des{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.des-text{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    width: 600px;
+    text-align: center;
+
+}
+.des-text:hover{
+    color: rgb(81, 81, 81);
+    transition-duration: 0.5s;
+}
+.back-des{
+    background-color: #09080872;
+    width: 800px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 20px;
+}
+.sectiontitlee-text{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    margin-top: 80px;
+    font-weight: 500;
+    margin-right: 690px;
+
+}
+.pd-all-coloumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+.pd-name-text{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+.projectname-text{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 20px;
+}
+.projectabout-text{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    width: 600px;
+}
+.projectabout-text:hover{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: rgb(81, 81, 81);
+    transition-duration: 0.5s;
+    text-align: center;
+    width: 600px;
+}
