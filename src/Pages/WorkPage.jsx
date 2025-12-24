@@ -1,17 +1,58 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './WorkPage.css';
 import WorkNav from '../Components/WorkNav';
 import WorkC from '../Components/WorkC';
 import pink from '../Assets/pink.svg';
-import project1 from '../Assets/project1.png';
+// import project1 from '../Assets/project1.png';
 import project2 from '../Assets/project2.png';
 import project3 from '../Assets/project3.png';
 import Footer from '../Components/Footer';
 import TiltedCard from '../Components/TiltedCard';
 
 import {Helmet} from "react-helmet";
+import { supabase } from '../Supabase';
 
 const WorkPage = () => {
+
+
+const [loading, setLoading] = useState(true);
+const [Projects, setProjects] = useState([
+
+
+        {
+
+                id:"",
+                title:"",
+                coverimg:"",
+                image:[],
+                description:"",
+                details:"",
+                category:[]
+                
+               } 
+
+
+]) ;
+
+
+useEffect(()=>{
+
+ async function getAllProjectsAPI(){
+  const res = await supabase.from("Projects").select("*");
+  setProjects(res.data);
+  // console.log(res.data);
+    setLoading(false);
+}
+getAllProjectsAPI();
+
+},[]);
+
+if (loading) return <p>Loading...</p>;
+
+const project1 = Projects.find(p => p.id === 1) || {};
+const project2 = Projects.find(p => p.id === 2) || {};
+const project3 = Projects.find(p => p.id === 3) || {};
+
     return ( 
         <>
         
@@ -32,35 +73,61 @@ const WorkPage = () => {
 </header>   
 
 
+{Projects
+  .filter(Projects => Projects.id === 1)
+  .map(Projects => (
+
 <article className='first-boxx'>
 
 <img src={pink} alt="pink" className='pink' />
-<h1 className='ui-text'>UI & UX Design</h1>
+<h1 className='ui-text'>{Projects.category}</h1>
 
 </article>
+
+) 
+) 
+}
+
+{Projects
+  .filter(Projects => Projects.id === 1)
+  .map(Projects => (
 
 <div className='center'>
 
         <p className='paragraph'>
-        My process starts with understanding users their needs, goals, and challenges  then translating that into intuitive layouts and engaging visual designs. I pay attention to every detail: from color and typography to usability and accessibility.
+        {Projects.Pagedescription}
         </p>
 
 </div>
 
 
+) 
+) 
+}
 
 <article className='article-row-200'>
 
+{Projects
+  .filter(Projects => Projects.id === 1)
+  .map(Projects => (
 
 <div className='all'>
 
-<WorkC title="Giza Zoo Website" paragraph="The Giza Zoo website is a modern, interactive redesign project that highlights the beauty, history, and wildlife of Egypt’s oldest zoo. My goal was to create an engaging user experience that blends education with exploration." 
-view="View Project Details"/>
+<WorkC 
+title={Projects.title} 
+description={Projects.description} 
+Details={Projects.Details}
+/>
 
-</div>
+</div>  
+
+
+) 
+) 
+}
 
 <TiltedCard
-  imageSrc={project1}
+  imageSrc={project1.coverimg}
   altText="Giza Zoo Website"
   captionText="Giza Zoo Website"
   containerHeight="200px"
@@ -84,16 +151,28 @@ view="View Project Details"/>
 
 <article className='article-row-200'>
 
+{Projects
+  .filter(Projects => Projects.id === 2)
+  .map(Projects => (
 
 <div className='all'>
 
-<WorkC title="Real Esatate Website" paragraph="The design focuses on clarity and usability featuring clean layouts, large visuals, and intuitive filters to help users find homes that match their needs. I also integrated responsive design techniques to ensure the website looks and works perfectly on all devices." 
-view="View Project Details"/>
+<WorkC
+title={Projects.title} 
+description={Projects.description} 
+Details={Projects.Details}
+/>
 
 </div>
 
+
+) 
+) 
+}
+
+
 <TiltedCard
-  imageSrc={project2}
+  imageSrc={project2.coverimg}
   altText="Real Esatate Website"
   captionText="Real Esatate Website"
   containerHeight="200px"
@@ -117,16 +196,28 @@ view="View Project Details"/>
 <article className='article-row-200'>
 
 
+{Projects
+  .filter(Projects => Projects.id === 3)
+  .map(Projects => (
 
 <div className='all'>
 
-<WorkC title="Jewellery Website" paragraph="The website features product collections, detailed item pages, and a user-friendly interface that makes browsing effortless. It’s fully responsive, ensuring a seamless experience on both desktop and mobile." 
-view="View Project Details"/>
+<WorkC 
+title={Projects.title} 
+description={Projects.description} 
+Details={Projects.Details}
+/>
 
 </div>
 
+
+) 
+) 
+}
+
+
 <TiltedCard
-  imageSrc={project3}
+  imageSrc={project3.coverimg}
   altText="Jewellery Website"
   captionText="Jewellery Website"
   containerHeight="200px"

@@ -34,16 +34,16 @@ if (loading) return <p>Loading...</p>;
         <article className='article'>
 
 {Projects
-  .filter(Projects => Projects.id === 2)
+  .filter(Projects => Projects.id === 1 )
   .map(Projects => (
 
 <div className='all'>
 
 <h1 className='title'>{props.title}</h1>
 <p className='para'>
-    {props.paragraph}
+    {props.description}
 </p>
-<p className='view'>{props.view}</p>
+<p className='view'>{props.Details}</p>
 
 </div>
 
