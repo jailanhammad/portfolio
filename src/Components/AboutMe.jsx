@@ -39,7 +39,7 @@ getAllAboutusAPI();
 
 },[]);
 
-if (loading) return <p>Loading Api's...</p>;
+if (loading) return <p>Loading...</p>;
 
 
     return ( 

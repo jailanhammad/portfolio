@@ -47,7 +47,7 @@ getAllProjectsAPI();
 
 },[]);
 
-if (loading) return <p>Loading Api's...</p>;
+if (loading) return <p>Loading...</p>;
 
 const project1 = Projects.find(p => p.id === 1) || {};
 const project2 = Projects.find(p => p.id === 2) || {};
