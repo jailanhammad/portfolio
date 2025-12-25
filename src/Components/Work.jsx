@@ -50,11 +50,7 @@ if (loading) return <p>Loading...</p>;
 
         <article class="work">
 
- 
-
-        <section class="skills-section">
- 
-{Work
+        {Work
   .filter(Work => Work.id === 1)
   .map(Work => (
 
@@ -64,6 +60,10 @@ if (loading) return <p>Loading...</p>;
 ) 
 }
   
+
+        <section class="skills-section-work">
+ 
+
 <section class="middle">
 
 {Work
