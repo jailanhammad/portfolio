@@ -1,81 +1,202 @@
-import React from 'react';
-import './Work.css';
+import React, {useEffect, useState} from 'react';
+import { useRef } from 'react';import './Work.css';
 import cd from '../Assets/cd.svg';
 import {Link, link} from 'react-router-dom';
+import { supabase } from '../Supabase';
 
 
  const Work = () => {
+
+    const containerRef = useRef(null);
+
+    const [loading, setLoading] = useState(true);
+    const [Work, setWork] = useState([
+
+
+        {
+
+                id:"",
+                title:"",
+                coverimg:"",
+                image:[],
+                description:"",
+                details:"",
+                category:[]
+                
+               } 
+
+
+]) ;
+
+
+useEffect(()=>{
+
+ async function getAllWorkAPI(){
+  const res = await supabase.from("Work").select("*");
+  setWork(res.data);
+  // console.log(res.data);
+    setLoading(false);
+}
+getAllWorkAPI();
+
+},[]);
+
+if (loading) return <p>Loading...</p>;
+
     return (
         <>
 
 
 
-
         <article class="work">
 
-<h1 class="about-me-text">What I Do</h1>
+ 
 
+        <section class="skills-section">
+ 
+{Work
+  .filter(Work => Work.id === 1)
+  .map(Work => (
+
+<h1 class="what-i-text">{Work.title}</h1>
+
+) 
+) 
+}
+  
 <section class="middle">
 
-    <p class="service">My Services</p>
+{Work
+  .filter(Work => Work.id === 1)
+  .map(Work => (
 
+    <p class="service">{Work.section}</p>
 
+) 
+) 
+}
     <div class="container">
-        <img src={cd} class="disc"></img>
-
+    {Work
+  .filter(Work => Work.id === 1)
+  .map(Work => (
+        
+        <img src={Work.img} class="disc"></img>
+        ) 
+        ) 
+        }
+          
         <div class="services-grid">
-            <div class="service-btn btn-1">
 
+        {Work
+  .filter(Work => Work.id === 1)
+  .map(Work => (
+
+            <div class="service-btn btn-1">
+            
 <Link to="/Work-page" className='linkkk'>
-UI / UX
+{Work.program}
 </Link>
             </div>
+) 
+) 
+}
+  
+
+{Work
+  .filter(Work => Work.id === 2)
+  .map(Work => (
 
             <div class="service-btn btn-2">
+
 <Link to="/Work-page" className='linkkk'>
-Programming
+{Work.program}
 </Link>
             </div>
+
+) 
+) 
+}
+  
+
+{Work
+  .filter(Work => Work.id === 3)
+  .map(Work => (
+
 
             <div class="service-btn btn-3">
 <Link to="/Work-page" className='linkkk'>
-Graphic Design
+{Work.program}
 </Link>
             </div>
+
+) 
+) 
+}
+  
+{Work
+  .filter(Work => Work.id === 4)
+  .map(Work => (
 
 
             <div class="service-btn btn-4">
                 
 <Link to="/Work-page" className='linkkk'>
-Photography
+{Work.program}
 </Link>
                 
-                </div>
+            </div>
+
+) 
+) 
+}
+
+  
+{Work
+  .filter(Work => Work.id === 5)
+  .map(Work => (
 
             <div class="service-btn btn-5">
 
 <Link to="/Work-page" className='linkkk'>
-Branding
+{Work.program}
 </Link>
             </div>
+
+) 
+) 
+}
+
+  
+{Work
+  .filter(Work => Work.id === 6)
+  .map(Work => (
 
             <div class="service-btn btn-6">
                 
 <Link to="/Work-page" className='linkkk'>
-3D Modeling
+{Work.program}
 </Link>  
                 
-                </div>
+            </div>
+
+) 
+) 
+}
+
         </div>
+
+
     </div>
-
-
-
-
 
 </section>
 
-</article>
+
+        </section>
+
+
+
+
+        </article>
 
         
         

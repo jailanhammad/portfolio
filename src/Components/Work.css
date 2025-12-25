@@ -9,6 +9,7 @@
     align-items: center;
     align-content: center;
     gap: 40px;
+    /* margin-left: 80px; */
   }
   .service{
     font-family: var(--poppins);
@@ -238,7 +239,13 @@
     color: var(--gray);
   }
   
-
+  .what-i-text{
+    font-family: var(--poppins);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--white);
+    /* margin-left: 40px; */
+  }
 
 
   .container {
@@ -249,7 +256,7 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: inherit;        /* Makes the color match the rest of the text */
+    color: inherit;       
     cursor: default;
 }
 
@@ -289,7 +296,7 @@
 
 .services-grid {
     position: absolute;
-    width: 100%;
+    /* width: 100%; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, 1fr);
